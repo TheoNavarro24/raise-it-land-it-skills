@@ -1,6 +1,8 @@
-# Trace prototype: fictional completed-run example
+# Try Trace
 
-Install/select Trace in your compatible agent first. Start a fresh conversation. Copy only the complete input block below as your user message. Do not paste instructions, acceptance criteria or an expected review. Trace should load its installed rubric/protocol/resources; if it cannot, record a loading limitation. This transcript and its public context are fictional.
+Open a new chat with Trace selected. Copy the whole box below and send it as one message.
+
+This is a made-up conversation about closing customer-support tickets. You are trying Trace in the tutor's role, after the conversation has finished.
 
 ```text
 Tutor request: review this fictional deidentified complete cycle 1 run, including its opening and close. Player and Counterpart are the only speakers. No cue or coaching was used.
@@ -16,4 +18,8 @@ C4 Counterpart: Agreed. I own that revision and review condition.
 Public context supplied by tutor: The Counterpart has authority to edit and release the closing email and has a reserved editing slot before Thursday. No other supplied constraint conflicts with the revision.
 ```
 
-This is a tutor’s post-run evidence review, not assessed-performance assistance. The tutor checks quotations, context and interpretation before any use. Two alternative public feasibility contexts appear in trace-feasibility-inputs.json; use a separate fresh conversation for each, never merge cases.
+Read the review alongside the conversation. Are the quotations accurate? Does Trace distinguish the learner's words from the other speaker's? Does it explain why the proposed next step is feasible?
+
+Trace should help you inspect the evidence. It shouldn't give the learner a grade or write an ideal replacement answer.
+
+[More Trace tests](../tests/README.md#trace) · [Back to the project](../README.md)

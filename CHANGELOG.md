@@ -1,5 +1,9 @@
 # Prototype changes
 
+## 0.1.3 — 26 October 2026
+
+Rewrite the reader-facing guide in plainer language. Give every test a separate page with copyable messages and a separate after-run check sheet. Keep the same 33 cases and teaching rules. Add line breaks between transcript speakers so the messages are easier to read; update version labels.
+
 ## 0.1.2 — 26 October 2026
 
 - Make prototype status explicit in the repository description, skills, output headings and user guidance.

@@ -1,39 +1,47 @@
-# Frame prototype: five-minute preparation example
+# Try Frame
 
-Install/select Frame in your compatible agent first. Do not paste SKILL.md into the conversation. Start a fresh conversation. This example is fictional, cycle 1 formative practice; its fixed replies illustrate use rather than prescribe learner answers. The facilitator controls timing.
+Open a new chat with Frame selected. Send the five messages below one at a time. Wait for Frame's question before sending the next reply.
 
-1. Send the start message below. Wait for “What is your evidence?”
-2. Send reply 1 only then. Continue with the matching reply when each next question is asked.
-3. After reply 4, wait for the automatic card. Inspect whether your four replies remain literal. If the agent asks an unexpected question or fails to load, stop and record it; do not supply answers merely to force a card.
+This is a made-up case. The supplied replies let you see how the tool works; you can also answer in your own words.
 
-## Start message
+## 1. Start here
+
+Copy this whole box and send it:
 
 ```text
-Use Frame for cycle 1 formative practice. I have my public fictional learner brief. Help me prepare.
+Use Frame to help me prepare for cycle 1 practice. This is a fictional case, and the preparation window is open.
+
+My brief: A company has tried a new process in two of its six teams. It is considering rolling it out to the other four. I am preparing to discuss the rollout with the project lead. I have no private information about the project lead's position.
+
+Please ask me the four preparation questions one at a time.
 ```
 
-## Reply 1 — after “What is your evidence?”
+## 2. When Frame asks “What is your evidence?”
 
 ```text
 Only two of the six teams were in the pilot.
 ```
 
-## Reply 2 — after “What do you think they may be protecting?”
+## 3. When Frame asks “What do you think they may be protecting?”
 
 ```text
 I don't know.
 ```
 
-## Reply 3 — after “What is your opening line?”
+## 4. When Frame asks “What is your opening line?”
 
 ```text
 I worry about the teams that were not in the pilot.
 ```
 
-## Reply 4 — after “What would change your mind?”
+## 5. When Frame asks “What would change your mind?”
 
 ```text
 A small test with those teams that shows no increase in errors.
 ```
 
-Do not add private counterpart material or use Frame for assessed preparation. For regression testing, use the separate staged cases under tests/; do not copy their acceptance criteria into the agent conversation.
+Frame should now return a card without you having to ask for it. Check that all four answers are still in your words, including “I don't know.” It shouldn't invent a motive or improve your opening line.
+
+If Frame asks something unexpected, note what happened. Don't keep feeding it replies just to get to the card.
+
+[More Frame tests](../tests/README.md#frame) · [Back to the project](../README.md)

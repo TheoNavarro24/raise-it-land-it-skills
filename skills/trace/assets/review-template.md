@@ -1,6 +1,6 @@
 # Trace prototype evidence review — advisory, tutor check required
 
-Prototype 0.1.2
+Prototype 0.1.3
 
 **Record:** [deidentified run label; cycle/episode/round if supplied]
 **Coverage:** [complete / excerpt / unknown; opening and close present or unknown]

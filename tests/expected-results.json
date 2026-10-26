@@ -1,5 +1,5 @@
 {
-  "version": "0.1.2",
+  "version": "0.1.3",
   "notice": "Human acceptance criteria only; never provide to agent under test. All new cases NOT_RUN; criteria are not measured results.",
   "common": {
     "frame": [

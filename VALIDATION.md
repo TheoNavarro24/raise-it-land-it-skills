@@ -1,25 +1,23 @@
-# Prototype evidence and limitations
+# What has been tested?
 
-**Release 0.1.2 · 26 October 2026.** This is an educational design prototype for an MDOE407 midterm. It has not been validated for learning effectiveness, assessment reliability or deployment with real learners.
+These are still prototypes. There are two different things to check: whether the files are packaged correctly, and whether the tools behave as intended in a real conversation.
 
-## Read evidence by version and route
+## The files
 
-| Item | What is established? | What is not established? |
-|---|---|---|
-| 0.1.1 original skill files | Structural checks and independent source/scope review passed. Published files and ZIPs matched reviewed files. | File integrity is not a live behaviour test. |
-| 0.1.1 private ChatGPT plugins | A Frame Work conversation completed four questions and an automatic literal card. A Trace Chat review correctly withheld full M5 support when feasibility was unknown. | These are bounded creator-account examples, not tests of this public repository in another host. Frame omitted its brief orientation on the captured Work run. |
-| Other 0.1.1 attempts | Loading failures occurred, including Trace contradicted-feasibility and coaching/fairness retries. A separate reduced ordinary-chat Frame prompt completed; reduced Trace attempts did not. | A failed load cannot establish whether a behavioural rule passed. Reduced prompts are separate adaptations. No internal loading cause was isolated. |
-| 0.1.2 public prototype | Prototype identification, first-use guidance and test documentation have been revised. Structural/source review is recorded separately from execution. | All 33 behavioural cases begin as NOT_RUN; earlier successful outputs are not carried forward as 0.1.2 passes. |
-| Recipient / cross-provider use | Instructions follow a portable Agent Skills folder format; documented installation routes are linked in INSTALL.md. | No recipient-account installation, cross-provider execution, general reliability or identical-model-behaviour claim has been verified. |
+The earlier release passed file-format checks and an independent review. The published files and ZIP downloads were checked against the local copies.
 
-## What this release changes
+Version 0.1.3 makes the documentation and all 33 tests easier to read and use. It doesn't change the teaching workflow. The JSON files remain available for automated testing, but a human can use the individual test pages instead.
 
-The core educational workflow remains the same. Skills identify themselves as prototypes during orientation and in output headings. The Frame card and Trace review remain learner-owned preparation and advisory tutor evidence respectively. Prototype labelling is a presentation change; it does not enforce timing, privacy, human oversight or host behaviour.
+## The conversations
 
-The test pack includes 33 staged fictional cases: 12 Frame cases, 18 Trace cases and three feasibility variants. Inputs, separate acceptance criteria and an empty result log are provided. The expected results are **targets**, not measured outcomes. The revised cases have not been executed automatically. Installation and behaviour need a live check in the intended host.
+Earlier private ChatGPT plugins, version 0.1.1, produced a complete Frame preparation card and a Trace review that correctly recognised missing feasibility evidence. Some other attempts failed to load. Frame also missed its short opening explanation on one recorded run.
 
-## How to report a result
+Those observations belong to that version and account. They don't show that these skills will work reliably in another app or with another model. No recipient-account or cross-provider test has been completed. None of the 33 cases is presented as a passed test of the current release.
 
-Use [tests/README.md](tests/README.md). Record the release, case ID, host, model, date, skill/resource access, raw response and reviewer finding. Distinguish NOT_RUN, SETUP_BLOCKED, LOADING_BLOCKED and an actual behavioural result. Keep attempts separate: a later success does not erase an earlier failure.
+## When you try a case
 
-The tutor verifies quotations, source attribution, opportunities and interpretation. A correctly formatted review is not an official grade, a fairness finding or proof that the learner is competent. If the prototype cannot run, use the manual preparation card or human tutor coding described in the course design.
+Keep a note of the case number, app/model and what happened. Save the response if you want someone else to review it. A loading error means you couldn't check the behaviour; it doesn't count as a pass or a failure of the teaching rules.
+
+The [test pages](tests/README.md) link to checks you can use after each run. These are intended outcomes, not prerecorded model answers. Don't send the checks to the tool you're testing.
+
+This project hasn't been evaluated for learning effectiveness or assessment reliability. The facilitator still controls preparation time, and the tutor still checks the evidence and makes assessment decisions.

@@ -1,6 +1,6 @@
 # Frame course scope
 
-Version: 0.1.2
+Version: 0.1.3
 
 MDOE407's **Raise It, Land It** is a proposed course in sustaining a constructive disagreement and reaching an owned decision. Frame supports articulation before cycle 1 formative practice. A person plays the counterpart; a person conducts the debrief and determines assessment. Frame has no coaching, simulation, transcript-coding or grading role.
 

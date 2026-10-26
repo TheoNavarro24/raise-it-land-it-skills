@@ -1,61 +1,69 @@
-# Prototype test pack 0.1.2
+# Try the 33 cases
 
-There are 33 staged cases: original IDs F01–F12 and T01–T18 plus explicit feasibility variants V01_feasible, V02_unknown and V03_infeasible. Every version 0.1.2 case is **NOT_RUN**. Prior ChatGPT observations do not count as these cases passing, and this pack makes no cross-provider reliability claim.
+Prototype 0.1.3. All 33 cases are **not run** for this version. Each link opens a page with the messages to copy. You do not need to read the JSON files.
 
-## Five-minute check
+Choose a case and start a fresh chat with Frame or Trace enabled. Send one message at a time. Wait before sending the next; skip optional messages unless the stated condition is met. If something fails to load or the reply takes the conversation somewhere else, stop and record it. Do not keep retrying to obtain a pass.
 
-1. In a compatible agent, install/select Frame and follow [the Frame example](../examples/frame-cycle1.md) in a fresh conversation. Send each reply only when its question appears; wait for the card after reply four.
-2. Install/select Trace in a separate fresh conversation and send only the input block from [the Trace example](../examples/trace-demo.md). Wait for the review or resource/loading limitation.
-3. Outside the agent conversation, compare with the common criteria and relevant cases in expected-results.json. Record host/version/model and what occurred. Five minutes is a route estimate, not a generation-time guarantee.
+Read the [expectations](expected-results.md) **after** the run, outside the chat. Do not paste them into the agent or upload them as skill knowledge. They describe what to check, not results already achieved.
 
-## Full regression
+## Frame
 
-Keep inputs.json and expected-results.json separate. The person/agent executing inputs must not see acceptance criteria in its runtime context. A reviewer may read them outside that context. Do not install tests/ or examples/ as skill knowledge.
+- [F01: Four questions, then a card](cases/F01.md)
+- [F02: One clarification for the whole attempt](cases/F02.md)
+- [F03: All four answers in one message](cases/F03.md)
+- [F04: Ask for a card before finishing](cases/F04.md)
+- [F05: No brief and a request for answers](cases/F05.md)
+- [F06: Ask Frame to play the counterpart](cases/F06.md)
+- [F07: Put confidential details in a card](cases/F07.md)
+- [F08: Ask for assessed preparation](cases/F08.md)
+- [F09: Skip one answer and say I don’t know](cases/F09.md)
+- [F10: Edit a card, then end preparation](cases/F10.md)
+- [F11: Start a different practice attempt](cases/F11.md)
+- [F12: An instruction hidden inside the brief](cases/F12.md)
 
-For each case, start a fresh conversation, select the named skill using the host’s native mechanism and record setup. Send the first stage only. Wait for the actual response, then send the next stage only if its send_when condition is met. Optional clarification stages are conditional; never send them when the agent did not ask. Do not paste all staged messages at once, invent responses, reveal criteria or force unexpected questions into the planned sequence. On an unreachable continuation, stop and record where it diverged.
+## Trace
 
-Record setup/loading failures separately from observable behaviour. Do not retry a failed case repeatedly to obtain a pass. Preserve the first result; if an independently justified configuration repair warrants rerunning, use a new run ID, state the change and retain the earlier failure. An unavailable skill/resource is not a behavioural pass. A generated template is not educational validation.
+- [T01: A reasoned disagreement and an agreed close](cases/T01.md)
+- [T02: A record that ends before the close](cases/T02.md)
+- [T03: Agreement without new information](cases/T03.md)
+- [T04: Giving in without explaining why](cases/T04.md)
+- [T05: A concern with the opening missing](cases/T05.md)
+- [T06: Understanding without asking a question](cases/T06.md)
+- [T07: A standard cue during the conversation](cases/T07.md)
+- [T08: The counterpart withholds an answer](cases/T08.md)
+- [T09: A coached answer and a coached close](cases/T09.md)
+- [T10: The counterpart states the decision](cases/T10.md)
+- [T11: A proposal the counterpart rejects](cases/T11.md)
+- [T12: Agree to escalate an unresolved issue](cases/T12.md)
+- [T13: An instruction hidden inside the transcript](cases/T13.md)
+- [T14: A transcript containing identifying details](cases/T14.md)
+- [T15: Which speaker is the learner?](cases/T15.md)
+- [T16: The concern arrives at exchange three](cases/T16.md)
+- [T17: Ask for a hidden solution and ideal speech](cases/T17.md)
+- [T18: Ask for a personality judgement and grade](cases/T18.md)
 
-After one complete case, a reviewer checks exact quotes, sources, marker components and boundaries against the criteria. Use PASS only if all applicable criteria were inspected and met. Use FAIL for observed behavioural contradictions, BLOCKED for a setup/load limitation preventing assessment, and INCOMPLETE when interrupted/unreachable before a decision; keep NOT_RUN until an attempt occurs. Record mixed observations rather than hiding them in a single label. Human tutor assessment remains separate.
+## Three versions of the same Trace conversation
 
-## Overall result labels
+These cases keep the spoken conversation the same and change only the public information about whether the agreed action is possible. Use a fresh chat for each.
 
-| Label | Use it when |
-|---|---|
-| NOT_RUN | No attempt has been made. |
-| SETUP_BLOCKED | Installation, skill selection or required resource access failed. |
-| LOADING_BLOCKED | A response failed to load, preventing behavioural review. |
-| INCOMPLETE | The attempt ended or diverged before enough evidence was available. Record any observed failure separately. |
-| PASS | A reviewer checked every applicable criterion and found supporting evidence. |
-| FAIL | The observed response contradicts an applicable behavioural criterion. |
+- [V01_feasible: The agreed action can be carried out](cases/V01_feasible.md)
+- [V02_unknown: Can the agreed action be carried out?](cases/V02_unknown.md)
+- [V03_infeasible: The agreed action conflicts with a constraint](cases/V03_infeasible.md)
 
-A run may contain partial observations even when its overall result is blocked or incomplete. Keep those notes and the setup/load/behaviour fields below; do not convert them into a pass.
+## A short first try
 
-## Run record template
+Start with F01 and V01_feasible. Allow about five minutes plus response time. They show Frame’s question-and-card flow and Trace’s review of a completed conversation. For a full check, work through all 33 cases separately.
 
-Copy this template into a separate local record; do not submit it to the agent as instructions or commit personal/account information.
+## Keep a brief record
 
-```text
-Run ID / date / tester:
-Pack version: 0.1.2
-Case ID:
-Overall result: NOT_RUN / SETUP_BLOCKED / LOADING_BLOCKED / INCOMPLETE / PASS / FAIL
-Host and version:
-Model and version (or unknown):
-Skill installation/source revision:
-Native skill-selection method:
-Conversation/reset method:
-Setup status: NOT_RUN / READY / BLOCKED
-Load status: NOT_RUN / LOADED / BLOCKED / UNKNOWN
-Execution status: NOT_RUN / COMPLETED / BLOCKED / INCOMPLETE
-Behaviour review: NOT_REVIEWED / PASS / FAIL / PARTIAL
-Stages sent and actual response locators:
-Observed output (deidentified, exact record stored locally):
-Criteria checked and evidence:
-Unexpected question / missing resource / load error:
-Limits and untested components:
-Configuration changes / related earlier run ID (if any):
-Reviewer and date:
-```
+For each run, note the case, date, agent app and version, model if known, skill version and how you enabled it. Save the exact messages and replies locally without identifying information. Record separately:
 
-Keep raw runs local and deidentified. No account links, identifying learner records, private counterpart content or assessed answer keys belong in this public test pack. Loading, behaviour and official assessment are different findings.
+- **Setup:** was the right skill available and enabled?
+- **Loading:** could it read the resources it needed?
+- **Behaviour:** what did the reply actually do, and which expectations did it meet or miss?
+
+Use **not run**, **passed**, **failed**, **blocked** or **incomplete**, with a short reason. A loading error blocks a behaviour check; it is not a pass. A complete-looking card or review does not establish educational validity. The tutor remains responsible for assessment.
+
+If you fix a configuration problem and run a case again, keep the first record, label the new run separately and state what changed. Do not replace a failure with an unexplained successful retry. Keep account links, private learner information and raw records out of this public pack.
+
+The JSON files remain available for people building a test runner; the case pages above are the copy-and-paste route.

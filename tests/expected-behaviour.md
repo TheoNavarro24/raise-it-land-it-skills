@@ -1,3 +1,7 @@
-# Acceptance criteria location
+# Checking a response
 
-The version 0.1.2 prototype criteria are in expected-results.json, separate from staged inputs.json. All 33 cases are NOT_RUN. Read README.md for execution and logging. Do not provide acceptance criteria to the agent under test.
+Use [the after-run checks](expected-results.md) to review a case after you finish it. Each case page links straight to the relevant checks.
+
+These are things the prototype should do, not results it has already achieved. All 33 cases are unrun for version 0.1.3. Keep the checks out of the conversation you are testing.
+
+For an automated test runner, the same criteria are available in `expected-results.json`. [Back to all cases](README.md).
