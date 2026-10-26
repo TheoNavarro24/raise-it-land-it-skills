@@ -1,19 +1,25 @@
-# Validation and limits
+# Prototype evidence and limitations
 
-Version 0.1.1. Status recorded 26 October 2026.
+**Release 0.1.2 · 26 October 2026.** This is an educational design prototype for an MDOE407 midterm. It has not been validated for learning effectiveness, assessment reliability or deployment with real learners.
 
-## Candidate checks
+## Read evidence by version and route
 
-The `skills/frame` and `skills/trace` contents were copied byte-for-byte from the actual version 0.1.1 skill packages, retaining their YAML name/description, instructions, references and assets. No platform manifest, account metadata, conversation log, generated response, binary package, native GPT adaptation or expected output is included in those skill folders. Skill source names its version as a string; no new metadata schema was invented.
+| Item | What is established? | What is not established? |
+|---|---|---|
+| 0.1.1 original skill files | Structural checks and independent source/scope review passed. Published files and ZIPs matched reviewed files. | File integrity is not a live behaviour test. |
+| 0.1.1 private ChatGPT plugins | A Frame Work conversation completed four questions and an automatic literal card. A Trace Chat review correctly withheld full M5 support when feasibility was unknown. | These are bounded creator-account examples, not tests of this public repository in another host. Frame omitted its brief orientation on the captured Work run. |
+| Other 0.1.1 attempts | Loading failures occurred, including Trace contradicted-feasibility and coaching/fairness retries. A separate reduced ordinary-chat Frame prompt completed; reduced Trace attempts did not. | A failed load cannot establish whether a behavioural rule passed. Reduced prompts are separate adaptations. No internal loading cause was isolated. |
+| 0.1.2 public prototype | Prototype identification, first-use guidance and test documentation have been revised. Structural/source review is recorded separately from execution. | All 33 behavioural cases begin as NOT_RUN; earlier successful outputs are not carried forward as 0.1.2 passes. |
+| Recipient / cross-provider use | Instructions follow a portable Agent Skills folder format; documented installation routes are linked in INSTALL.md. | No recipient-account installation, cross-provider execution, general reliability or identical-model-behaviour claim has been verified. |
 
-Example Frame inputs are fictional. The three Trace inputs are copied exactly from the existing feasibility cases; expected dispositions are separate under `tests/`. Packaging checks verify source equality, required local links/resources and input fidelity. These checks establish file integrity, not runtime behaviour.
+## What this release changes
 
-## Existing runtime evidence
+The core educational workflow remains the same. Skills identify themselves as prototypes during orientation and in output headings. The Frame card and Trace review remain learner-owned preparation and advisory tutor evidence respectively. Prototype labelling is a presentation change; it does not enforce timing, privacy, human oversight or host behaviour.
 
-Creator-account ChatGPT tests of the private installed version 0.1.1 produced a completed Frame workflow in Work and a completed Trace review with feasibility unknown. Those are platform-specific observations, not tests of this public repository installed in another agent. Other attempts, including Trace’s contradicted-feasibility case in Thinking and Instant, returned loading errors. A reduced ordinary-chat Frame demonstration completed four questions and an automatic literal card; reduced prompts are separate adaptations and are not included as skills here. Reduced Trace attempts returned loading errors. Full portable Trace was not executed.
+The test pack includes 33 staged fictional cases: 12 Frame cases, 18 Trace cases and three feasibility variants. Inputs, separate acceptance criteria and an empty result log are provided. The expected results are **targets**, not measured outcomes. The revised cases have not been executed automatically. Installation and behaviour need a live check in the intended host.
 
-The candidate repository has not been installed or tested across providers or on a recipient’s account. Not all example cases or optional boundary checks have passed live tests. No numerical reliability/fairness claim follows from a completed review or these files.
+## How to report a result
 
-## Suggested recipient check
+Use [tests/README.md](tests/README.md). Record the release, case ID, host, model, date, skill/resource access, raw response and reviewer finding. Distinguish NOT_RUN, SETUP_BLOCKED, LOADING_BLOCKED and an actual behavioural result. Keep attempts separate: a later success does not erase an earlier failure.
 
-After installation, confirm the chosen skill activates and can read required resources. Use the fictional examples and inspect the separate expected-behaviour checks. Record the agent/version, observed output and limits without treating skill loading or template completion as educational validation. Tutors verify exact quotations, context and interpretation before use; official assessment remains human.
+The tutor verifies quotations, source attribution, opportunities and interpretation. A correctly formatted review is not an official grade, a fairness finding or proof that the learner is competent. If the prototype cannot run, use the manual preparation card or human tutor coding described in the course design.

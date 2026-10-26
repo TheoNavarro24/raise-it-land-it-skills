@@ -1,29 +1,57 @@
-# raise-it-land-it-skills
+# Frame and Trace — educational prototypes
 
-Two portable Agent Skills for the proposed MDOE407 **Raise It, Land It** course, version 0.1.1.
+**MDOE407 midterm project · Raise It, Land It · Prototype release 0.1.2**
 
-**Frame** records a learner-owned four-field preparation card for cycle 1 formative practice. It asks questions and preserves the learner’s words without supplying arguments, inferred motives or coaching. **Trace** helps a tutor review a deidentified completed role-play, locating evidence for five markers (with M2a/M2b observations), uncertainty and opportunity concerns. It is advisory and does not grade.
+Frame and Trace demonstrate two proposed uses of AI in a course about raising a concern, investigating it and reaching a workable decision. These are experimental Agent Skills for demonstration and testing. They are not validated teaching or assessment products, and they do not grade learners.
 
-## Layout
+| Skill | Who uses it and when? | What should it produce? |
+|---|---|---|
+| **Frame** | A learner, before cycle 1 formative practice | A four-field preparation card containing the learner's own words. It asks questions; it does not supply arguments or coach an opening. |
+| **Trace** | A tutor, after a role-play has ended | An advisory review with exact transcript quotations, marker evidence, uncertainty and checks for the tutor. The tutor decides assessment. |
+
+## Start here
+
+1. **Install once:** download the individual [Frame and Trace skill ZIPs](https://github.com/TheoNavarro24/raise-it-land-it-skills/releases/tag/v0.1.2). Follow [INSTALL.md](INSTALL.md) for the documented Claude or local Codex route. You need an account/app that supports custom skills.
+2. **Try Frame:** activate Frame in a fresh conversation and follow [the staged Frame example](examples/frame-cycle1.md). Send one learner reply at a time, waiting for its question. The fourth reply should produce the card automatically.
+3. **Try Trace:** activate Trace in another fresh conversation and send [the complete fictional demo transcript](examples/trace-demo.md). Inspect the review and its five-part decision check.
+4. **Check the result:** use [the test guide](tests/README.md) and its separate expectations. Record the result in the supplied log template. Loading errors are blocked tests, not evidence that the behaviour passed.
+
+For a single download containing the documentation, skills and all test cases, choose `Frame-Trace-Prototype-Pack-0.1.2.zip` from the same release. Import only the individual skill ZIPs into a host.
+
+Allow about five minutes **after installation**, plus model generation time. The example text is fictional input for a demonstration, not an assessed learner's answer key. You can type your own permitted input instead.
+
+**The installation loads the operating instructions.** You do not need to paste `SKILL.md` into every conversation. The examples contain the brief, learner replies or transcript you send during a test.
+
+## What the links and downloads do
+
+The GitHub links let you inspect and download the skills. They do not launch a hosted chatbot or give access to private ChatGPT plugins. Install each complete skill folder in a compatible host before using it. The ZIPs contain instructions, references and templates; there is no custom server, executable script or API key in this repository.
+
+The file format is portable across compatible agents. Actual installation, file access, skill selection and model behaviour depend on the host. The documented installation routes have not been tested in a recipient's account. ChatGPT web plugin installation is not established by publishing these standalone folders.
+
+## What has actually been verified?
+
+Earlier **0.1.1 private ChatGPT plugin** attempts included a complete Frame workflow and a complete Trace review where feasibility was unknown. Other attempts failed to load. Those results do not establish that this public release works in another host.
+
+**0.1.2 adds clearer prototype instructions, installation guidance and a revised test pack. Its behavioural cases start as NOT_RUN.** File validation and independent review are different from a live user test. See [VALIDATION.md](VALIDATION.md) for evidence and limits.
+
+## Scope for this prototype
+
+- Use fictional demonstration material. Frame supports cycle 1 formative preparation; assessed/cycle 2 preparation and live calls are outside its scope.
+- Trace can support tutor review after either practice or an assessed run has ended. It never assists the assessed performance or produces an official grade.
+- A reasoned change, refinement or retention after new information may support **Move**. A concession is not required.
+- **Land it** requires evidence of a decision, owner, observable review condition, agreement and feasibility. An ownership promise alone does not establish feasibility.
+- The facilitator controls timing and card handling. The tutor checks evidence and decides assessment. These instructions do not technically enforce those responsibilities.
+
+## Files
 
 ```text
-skills/frame/SKILL.md       Frame instructions, with references and card asset
-skills/trace/SKILL.md       Trace instructions, rubric, protocol and review template
-examples/                  Fictional inputs only
-tests/                     Separate intended behaviour checks
-VALIDATION.md              What has and has not been verified
+skills/frame/       Installable Frame skill: SKILL.md, scope reference, card template
+skills/trace/       Installable Trace skill: SKILL.md, rubric, protocol, review template
+examples/           Fictional inputs for the short demonstration
+tests/              Staged regression inputs, separate expectations and result log
+INSTALL.md          Installation and first-use instructions
+VALIDATION.md       Evidence, version distinctions and known limitations
+CHANGELOG.md        Changes to the prototype
 ```
 
-## Use in a compatible agent
-
-Choose an agent that supports Agent Skills and access to the skill’s local resources. Follow that agent’s native installation/import instructions: install the complete `skills/frame` and/or `skills/trace` folder, keeping `SKILL.md`, `references/` and `assets/` together. If it installs from a repository, select the appropriate skill subfolder. Invoke Frame or Trace using that agent’s documented skill-selection mechanism. Use a fresh conversation per attempt/run and the fictional input in `examples/` for a first check.
-
-These are skills for compatible agents, not standalone software or a prompt guaranteed to work in a bare language model. Installation, skill selection and resource access vary by agent. Portability of the files does not establish identical behaviour, reliable loading or cross-provider validation. Trace must stop if its required resources are unavailable.
-
-## Runtime boundaries
-
-Frame accepts a public fictional cycle 1 brief supplied at runtime or confirmation that the learner has one. It does not support assessed/cycle 2 preparation, live calls, coaching or grading. The facilitator controls timing and card handling; the skill does not lock, save or collect cards.
-
-Trace operates after a run, including a tutor’s post-run review of an assessed run; it never assists the assessed performance. Supply deidentified transcript roles, coverage and only the public context needed. No hidden counterpart card, assessed solution, private workplace data or other learner’s run is required. Reasoned retention can evidence M2b; concession is not the goal. M5 requires explicit decision, owner, review condition, agreement and feasibility evidence. The tutor retains assessment responsibility.
-
-Neither skill guarantees privacy, consent, memory isolation, deletion, institutional compliance or fairness. Use the institution’s approved environment and data arrangements. Human preparation/coding remains available. See [validation limits](VALIDATION.md) and [intended behaviour](tests/expected-behaviour.md).
+Keep `examples/` and `tests/` outside the installed skill folders. In a blind test, the agent receives the skill and case input; the human reviewer keeps expected results separate. Report a problem with the release, host/model, case ID, observed response and expected check. Do not post real learner or workplace records in a public issue.
